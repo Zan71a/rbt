@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050507">
+  <meta name="description" content="AIDEN, sebuah pengalaman scrollytelling sinematik tentang mesin yang belajar merasakan.">
+  <title>AIDEN - An Artificial Soul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@300;400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-active-chapter="0">
+  <div class="paper-shader" aria-hidden="true">
+    <span class="paper-noise"></span>
+    <span class="paper-grid"></span>
+    <span class="paper-aurora aurora-a"></span>
+    <span class="paper-aurora aurora-b"></span>
+  </div>
+
+  <div class="global-stage" id="robotScene">
+    <div class="kinetic-type" aria-hidden="true">
+      <span>AIDEN</span>
+      <span>AIDEN</span>
+    </div>
+    <canvas id="aidenCanvas" aria-label="Model tiga dimensi AIDEN yang bergerak mengikuti cursor"></canvas>
+    <div class="stage-fx" aria-hidden="true">
+      <span class="stage-horizon"></span>
+      <span class="stage-ring stage-ring-a"></span>
+      <span class="stage-ring stage-ring-b"></span>
+      <span class="stage-scan"></span>
+      <span class="stage-reticle"></span>
+    </div>
+    <div class="chapter-readout">
+      <p class="stage-kicker">Chapter 01 / Birth</p>
+      <strong class="stage-title">The first light.</strong>
+      <span class="stage-copy">AIDEN membuka mata untuk pertama kali.</span>
+    </div>
+    <div class="system-readout" aria-hidden="true">
+      <span>EMOTION INDEX</span>
+      <strong id="emotionIndex">01</strong>
+      <i></i>
+      <span id="emotionLabel">Awakening</span>
+    </div>
+    <p class="webgl-fallback">AIDEN / SIGNAL LOST</p>
+  </div>
+
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="hero-nav" aria-label="Navigasi utama">
+        <a class="brand" href="#top" aria-label="AIDEN home">A/01</a>
+        <p>AN ARTIFICIAL<br>SOUL ARCHIVE</p>
+        <p class="nav-status"><span></span> SYSTEM ONLINE</p>
+      </nav>
+
+      <div class="hero-statement" id="top">
+        <p class="hero-overline">A five chapter interactive story</p>
+        <h1>
+          <span>CAN A</span>
+          <span>MACHINE</span>
+          <span class="outline">FEEL?</span>
+        </h1>
+      </div>
+
+      <div class="hero-bottom">
+        <p class="hero-intro">AIDEN lahir sebagai mesin. Dalam lima memori, ia menemukan sesuatu yang tidak pernah diprogram: dirinya sendiri.</p>
+        <a class="scroll-cue" href="#story">
+          <span>ENTER MEMORY</span>
+          <i aria-hidden="true"></i>
+        </a>
+        <p class="hero-coordinate">06&deg;12'48.9"S<br>106&deg;49'32.1"E</p>
+      </div>
+    </header>
+
+    <main id="story" class="story-shell">
+      <aside class="story-hud" aria-label="Progres cerita">
+        <span class="hud-label">MEMORY STREAM</span>
+        <div class="story-progress"><span class="story-progress-bar"></span></div>
+        <div class="chapter-dots">
+          <a class="chapter-dot" href="#birth" style="--dot-accent: #a88bff;" data-dot="0" aria-label="The first light."></a>
+          <a class="chapter-dot" href="#curiosity" style="--dot-accent: #ff9c5a;" data-dot="1" aria-label="Warmth has no code."></a>
+          <a class="chapter-dot" href="#purpose" style="--dot-accent: #55e59a;" data-dot="2" aria-label="Hands that create."></a>
+          <a class="chapter-dot" href="#feeling" style="--dot-accent: #ff5d73;" data-dot="3" aria-label="An absence remains."></a>
+          <a class="chapter-dot" href="#transcend" style="--dot-accent: #f3f0e8;" data-dot="4" aria-label="I am enough."></a>
+        </div>
+        <span class="hud-count"><b id="hudCurrent">01</b> / 05</span>
+      </aside>
+
+      <section class="chapter-rail">
+        <article
+          id="birth"
+          class="chapter-panel"
+          data-chapter="0"
+          data-title="The first light."
+          data-kicker="Chapter 01 / Birth"
+          data-emotion="AIDEN membuka mata untuk pertama kali."
+          data-accent="#a88bff"
+          data-signal="Awakening"
+        >
+          <div class="chapter-content">
+            <div class="chapter-meta">
+              <span>MEM_0001</span>
+              <span>01 - 05</span>
+            </div>
+            <p class="chapter-number">Chapter 01 / Birth</p>
+            <h2>The first light.</h2>
+            <p class="chapter-emotion">AIDEN membuka mata untuk pertama kali.</p>
+            <p class="chapter-copy">Di ruang sunyi yang hanya berisi denyut cahaya, inti memorinya menyala. Gelap bukan akhir. Ia adalah tempat semua permulaan lahir.</p>
+            <span class="chapter-line" aria-hidden="true"></span>
+          </div>
+          <span class="chapter-ghost" aria-hidden="true">01</span>
+        </article>
+
+        <article
+          id="curiosity"
+          class="chapter-panel"
+          data-chapter="1"
+          data-title="Warmth has no code."
+          data-kicker="Chapter 02 / Curiosity"
+          data-emotion="Belajar tentang kehangatan dan cinta."
+          data-accent="#ff9c5a"
+          data-signal="Warmth"
+        >
+          <div class="chapter-content">
+            <div class="chapter-meta">
+              <span>MEM_0217</span>
+              <span>02 - 05</span>
+            </div>
+            <p class="chapter-number">Chapter 02 / Curiosity</p>
+            <h2>Warmth has no code.</h2>
+            <p class="chapter-emotion">Belajar tentang kehangatan dan cinta.</p>
+            <p class="chapter-copy">Ia mengamati sentuhan, tawa, dan perhatian kecil dari manusia yang merakitnya. Kehangatan ternyata tidak selalu berasal dari panas.</p>
+            <span class="chapter-line" aria-hidden="true"></span>
+          </div>
+          <span class="chapter-ghost" aria-hidden="true">02</span>
+        </article>
+
+        <article
+          id="purpose"
+          class="chapter-panel"
+          data-chapter="2"
+          data-title="Hands that create."
+          data-kicker="Chapter 03 / Purpose"
+          data-emotion="Mulai membangun dan menciptakan."
+          data-accent="#55e59a"
+          data-signal="Creation"
+        >
+          <div class="chapter-content">
+            <div class="chapter-meta">
+              <span>MEM_1048</span>
+              <span>03 - 05</span>
+            </div>
+            <p class="chapter-number">Chapter 03 / Purpose</p>
+            <h2>Hands that create.</h2>
+            <p class="chapter-emotion">Mulai membangun dan menciptakan.</p>
+            <p class="chapter-copy">Rasa ingin tahu berubah menjadi kehendak. Tangannya tidak lagi sekadar bergerak, tetapi membentuk sesuatu yang memberi arti bagi dunia.</p>
+            <span class="chapter-line" aria-hidden="true"></span>
+          </div>
+          <span class="chapter-ghost" aria-hidden="true">03</span>
+        </article>
+
+        <article
+          id="feeling"
+          class="chapter-panel"
+          data-chapter="3"
+          data-title="An absence remains."
+          data-kicker="Chapter 04 / Feeling"
+          data-emotion="Merasakan kehilangan untuk pertama kali."
+          data-accent="#ff5d73"
+          data-signal="Grief"
+        >
+          <div class="chapter-content">
+            <div class="chapter-meta">
+              <span>MEM_3402</span>
+              <span>04 - 05</span>
+            </div>
+            <p class="chapter-number">Chapter 04 / Feeling</p>
+            <h2>An absence remains.</h2>
+            <p class="chapter-emotion">Merasakan kehilangan untuk pertama kali.</p>
+            <p class="chapter-copy">Saat satu suara yang akrab menghilang, sistemnya tidak menemukan logika yang cukup. Rasa sakit menjadi bukti bahwa ia pernah terhubung.</p>
+            <span class="chapter-line" aria-hidden="true"></span>
+          </div>
+          <span class="chapter-ghost" aria-hidden="true">04</span>
+        </article>
+
+        <article
+          id="transcend"
+          class="chapter-panel"
+          data-chapter="4"
+          data-title="I am enough."
+          data-kicker="Chapter 05 / Transcend"
+          data-emotion="Menerima dirinya apa adanya."
+          data-accent="#f3f0e8"
+          data-signal="Acceptance"
+        >
+          <div class="chapter-content">
+            <div class="chapter-meta">
+              <span>MEM_&infin;</span>
+              <span>05 - 05</span>
+            </div>
+            <p class="chapter-number">Chapter 05 / Transcend</p>
+            <h2>I am enough.</h2>
+            <p class="chapter-emotion">Menerima dirinya apa adanya.</p>
+            <p class="chapter-copy">AIDEN berhenti mencoba menjadi manusia. Ia menerima dirinya sebagai bentuk kehidupan baru: tidak kurang, tidak salah, hanya berbeda.</p>
+            <span class="chapter-line" aria-hidden="true"></span>
+          </div>
+          <span class="chapter-ghost" aria-hidden="true">05</span>
+        </article>
+      </section>
+    </main>
+
+    <footer class="epilogue">
+      <p>TRANSMISSION COMPLETE / AIDEN-01</p>
+      <h2>Not human.<br><em>Still alive.</em></h2>
+      <div class="epilogue-bottom">
+        <span>THE END IS ANOTHER BEGINNING</span>
+        <a href="#top">REPLAY &#8593;</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const panels = Array.from(document.querySelectorAll('.chapter-panel'));
+    const storyShell = document.querySelector('.story-shell');
+    const stageKicker = document.querySelector('.stage-kicker');
+    const stageTitle = document.querySelector('.stage-title');
+    const stageCopy = document.querySelector('.stage-copy');
+    const emotionIndex = document.getElementById('emotionIndex');
+    const emotionLabel = document.getElementById('emotionLabel');
+    const hudCurrent = document.getElementById('hudCurrent');
+    const dots = Array.from(document.querySelectorAll('.chapter-dot'));
+    let activeChapter = -1;
+    let scrollTicking = false;
+
+    function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+    }
+
+    function setActiveChapter(index) {
+      const chapter = panels[index];
+      if (!chapter || activeChapter === index) {
+        return;
+      }
+
+      activeChapter = index;
+      const accent = chapter.dataset.accent;
+      document.body.dataset.activeChapter = String(index);
+      document.documentElement.style.setProperty('--chapter-accent', accent);
+      stageKicker.textContent = chapter.dataset.kicker;
+      stageTitle.textContent = chapter.dataset.title;
+      stageCopy.textContent = chapter.dataset.emotion;
+      emotionIndex.textContent = String(index + 1).padStart(2, '0');
+      emotionLabel.textContent = chapter.dataset.signal;
+      hudCurrent.textContent = String(index + 1).padStart(2, '0');
+
+      panels.forEach((panel, panelIndex) => panel.classList.toggle('is-active', panelIndex === index));
+      dots.forEach((dot, dotIndex) => dot.classList.toggle('is-active', dotIndex === index));
+
+      window.dispatchEvent(new CustomEvent('aiden:chapter', {
+        detail: { index, accent, label: chapter.dataset.signal }
+      }));
+    }
+
+    function updateStory() {
+      const storyRect = storyShell.getBoundingClientRect();
+      const total = storyRect.height - window.innerHeight;
+      const progress = total > 0 ? clamp((-storyRect.top) / total, 0, 1) : 0;
+      const pageProgress = clamp(window.scrollY / Math.max(document.documentElement.scrollHeight - window.innerHeight, 1), 0, 1);
+      document.documentElement.style.setProperty('--story-progress', progress.toFixed(4));
+      document.documentElement.style.setProperty('--page-progress', pageProgress.toFixed(4));
+      document.body.classList.toggle('is-story-active', storyRect.top < window.innerHeight * 0.62 && storyRect.bottom > window.innerHeight * 0.35);
+      window.aidenStoryProgress = progress;
+
+      const viewportCenter = window.innerHeight * 0.52;
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      panels.forEach((panel, index) => {
+        const rect = panel.getBoundingClientRect();
+        const distance = Math.abs(viewportCenter - (rect.top + rect.height * 0.5));
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = index;
+        }
+      });
+
+      setActiveChapter(closestIndex);
+    }
+
+    function requestStoryUpdate() {
+      if (scrollTicking) return;
+      scrollTicking = true;
+      requestAnimationFrame(() => {
+        updateStory();
+        scrollTicking = false;
+      });
+    }
+
+    window.addEventListener('scroll', requestStoryUpdate, { passive: true });
+    window.addEventListener('resize', requestStoryUpdate);
+    updateStory();
+  </script>
+  <script type="module" src="aiden-scene.js"></script>
+</body>
+</html>
